@@ -1,0 +1,236 @@
+
+$left-right: 90px;
+$color1: rgba(255,209,40,0.9);
+$margin-left1: 55px;
+$width: 685px;
+$font-size1: 33px;
+$font-size2: 85px;
+$width-left: 425px;
+%float {
+	float: left;
+	display: inline-block;
+}
+%yellow {
+    @extend %float;
+    background-color: $color1;
+    width: 335px;
+    height: 100%;
+    margin-left: $left-right;
+    color: white;
+    text-align: center;
+}
+@mixin small-rectangle($width, $height, $margin-top) {
+    width: $width;
+    height: $height;
+    margin-top: $margin-top;
+    background-color: white;
+}
+.wrap {
+    width: 1200px;
+    border: 1px solid #80808052;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    .part1 {
+    	height: 310px;
+    	.hey {
+    		@extend  %yellow;
+		    .big {
+			    font-size: 90px;
+			    font-weight: 800;
+			    margin-top: 75px;
+			}
+			.small {
+				margin-top: -14px;
+			    font-size: 25px;
+			    font-weight: 300;
+			}
+		}
+		.award {
+			@extend %float;
+			width: $width;
+		    font-size: $font-size1;
+		    font-weight: 800;
+		    text-align: right;
+		    color: #fbcc4b;
+		    .text1 {
+		    	margin-top: 105px;
+			    margin-right: 40px;
+			}
+			.text2 {
+				margin-right: 30px;
+			}
+		}
+		.small-square {
+			width: $left-right;
+		    height: $left-right;
+		    display: inline-block;
+		    margin-top: 100px;
+		    background: rgba(255,209,40,0.8);
+		}
+    }
+    .part2 {
+        height: 505px;
+        background: #151d27;
+        .left{
+            @extend %yellow;
+            .small-rectangle {
+                @include small-rectangle(65px, 20px, 270px);
+                margin-left: $margin-left1;
+            }
+            .text {
+                margin-left: $margin-left1;
+                margin-top: 20px;
+                text-align: left;
+                width: 220px;
+                letter-spacing: 1px;
+            }
+        }
+        .long-rectangle {
+            width: 385px;
+            height: 20px;
+            float: right;
+            display: block;
+            background: #b6c0c0;
+        }
+        .right {
+            width: $width;
+            height: 485px;
+            @extend %float;
+            text-align: right;
+            color: white;
+            .header {
+                margin-top: 50px;
+                font-size: 46px;
+                .text1 {
+                    font-weight: 400;
+                }
+                .text2 {
+                    font-size: $font-size2;
+                    font-weight: 800;
+                    color: #fbcc4b;
+                }
+                .text3 {
+                    @extend .text1;
+                }
+            }
+            .text4  {
+                float: right;
+                width: 600px;
+                margin-top: 30px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    .part3 {
+        height: 880px;
+        background-image: url(../images/background.png);
+        background-size: cover;
+        background-position: -45px -75px;
+        .wrap-part3 {
+            position: relative;
+            height: 880px;
+            .small-wrapper1 {
+                width: $width-left;
+                .cube1 {
+                   @extend %yellow;
+                   height: 400px;
+                    .small-rectangle {
+                        @include small-rectangle(65px, 20px, 120px);
+                        margin-left: $margin-left1;
+                    }
+                    .text {
+                        font-size: $font-size1;
+                        font-weight: 700;
+                        float: left;
+                        width: 250px;
+                        margin-top: 50px;
+                        line-height: 40px;
+                        margin-left: $margin-left1;
+                    }
+                }
+                .cube3-contact {
+                    position: absolute;
+                    bottom: 0;
+                    width: $width-left;
+                    float: left;
+                    height: 480px;
+                    background-color: #151d27;
+                    color: white;
+                    .wrap-contact {
+                        width: 300px;
+                        margin-left: $left-right;
+                        margin-top: 100px;
+                        .contact {
+                            margin-top: 50px;
+                            font-size: 18px;
+                            img {
+                                width: 30px;
+                                height: 30px;
+                                margin-right: 30px;
+                            }
+                        }
+                        .website {
+                            margin-top: 60px;
+                            font-weight: 700;
+                            font-size: 20px;
+                            color: #dcb82b;
+                        }
+                    }
+                }
+            }
+            .small-wrapper {
+                width: 775px;
+                height: 880px;
+                float: right;
+                background: rgba(77,203,245,0.5);
+                .cube2 {
+                    right: $left-right;
+                    width: 685px;
+                    float: left;
+                    text-align: right;
+                    color: white;
+                    .header {
+                        font-size: $font-size2;
+                        margin-top: 60px;
+                        .text1 {
+                            font-weight: 800;
+                        }
+                        .small-rectangle {
+                            @include small-rectangle(20px, 65px, 50px);
+                            float: right;
+                            display: block;
+                        }
+                        .text2 {
+                            font-weight: 800;
+                            margin-top: 155px;
+                        }
+                    }
+                    .content {
+                        width: 500px;
+                        float: right;
+                        font-weight: 700;
+                        margin-top: 10px;
+                        .text4 {
+                            color: #242a31;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+                .cube4-logo {
+                    position: absolute;
+                    bottom: 0;
+                    left: $width-left;
+                    width: 775px;
+                    height: 190px;
+                    background-color: #31748e;
+                    img {
+                        width: 535px;
+                        margin-left: 120px;
+                        margin-top: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
