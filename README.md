@@ -5,8 +5,10 @@
 - Thực hiện bởi __Dương Minh Nam__
 
 ## Liên kết:
-- [front-end 1.5- sass]()
-- [front-end 1.6- sass]()
+- [front-end 1.5- sass -demo](https://duongnam99.github.io/Sass-html1/app/)
+- [front-end 1.5- sass -repo](https://github.com/duongnam99/Sass-html1)
+- [front-end 1.6- sass -demo](https://duongnam99.github.io/Sass-html2/app/)
+- [front-end 1.6- sass -repo](https://github.com/duongnam99/Sass-html2)
 
 ## Kiến thức nắm được:
 - Cách sử dụng gulp, viết các task cơ bản
